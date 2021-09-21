@@ -14,15 +14,35 @@ public class Persoon {
 
     private enum Gender {
         MALE,
-        FEMALE
+        FEMALE,
+        UNKOWN
     }
 
     //CONSTRUCTORS
+
+    public Persoon() {
+
+    }
+
+
     public Persoon(String name, int age, Gender gender) {
-        this.age = age;
+        this(24);
         this.name = name;
         this.gender = gender;
     }
+
+    public Persoon(int age) {
+    age = this.age;
+
+
+    }
+
+    public Persoon(String name, Gender gender) {
+        this(24);
+        this.name= "Unkown";
+        this.gender = Gender.UNKOWN;
+    }
+
 
     //SETTERS
     public void setAge(int age) {
